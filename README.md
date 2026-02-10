@@ -1,6 +1,6 @@
 **JCR Picture Ballot Information**
 
-This document explains how the artwork ballot system works for JCR members applying to lease artworks from the collection. The system is designed to be fair, transparent, and preference-based, ensuring that everyone is treated equally while taking individual preferences into account.
+The system is designed to be fair, transparent, and preference-based, ensuring that everyone is treated equally while taking individual preferences into account.
 
 # **Overview**
 
