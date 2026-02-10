@@ -1,0 +1,11 @@
+LAST NAME,FIRST NAME,SIZE_PREF,EXCLUDE,FALLBACK,PREF1,PREF2,PREF3
+Smith,Alice,"M,L",,Y,38,39,14
+Jones,Ben,S,15,N,14,,
+Taylor,Clara,"S,M",,Y,11,12,13
+Brown,David,L,"22,23",Y,36,38,
+Wilson,Eva,,,Y,30,31,32
+Johnson,Frank,M,19,N,19,20,
+Patel,Gita,"S,M,L",,Y,45,46,47
+Nguyen,Huy,"M,L",,Y,34,35,36
+O'Connor,Isla,S,,Y,50,49,
+Garcia,Jorge,M,38,Y,38,40,41
