@@ -14,10 +14,10 @@ There is no advantage to applying earlier or later.
 
 Each member submits a ballot containing:
 
-* A **ranked list of preferred artworks** (three choices)  
-* Any **size preferences** (small, medium, and/or large)  
-* A list of artworks they **do not want** to receive (two blacklists)  
+* A **list of preferred artworks** (up to three choices)
+* A list of artworks they **do not want** to receive (two blacklists)
 * An indication of whether they are willing to receive a **random suitable artwork** if none of their listed preferences are available
+* Any size preferences (small, medium and/or large) if they would like a random suitable artwork
 
 Members may list as many preferences as they like. Listing more preferences increases the chance of receiving an artwork.
 
@@ -25,62 +25,70 @@ Members may list as many preferences as they like. Listing more preferences incr
 
 # **How Allocation Works**
 
-The allocation process happens in **rounds** and treats all members equally.
+The ballot is designed to allocate artworks as fairly as possible while maximising the number of members who receive an artwork they selected.
 
 **Allocation Rounds**
 
-1. At the start of each round, all members are placed in a **random order**.  
-2. Following that order, the system attempts to assign **one artwork per member** in that round.  
-3. For each member, the system checks their preference list and assigns the **highest-ranked artwork** that:  
-   * Is still available  
-   * Matches their size preferences (if any)  
-   * Is not on their exclusion list  
-4. If a preferred artwork is no longer available, the system moves to the next preference.  
-5. At the end of the process, balloters receive one artwork from the collection.
+1. A five-digit seed (Year + Term Number, so Michaelmas 2026 is ‘20261’) is chosen for the ballot and entered when the allocation program is run. The seed is released alongside the ballot results so that the random elements of the allocation can be reproduced.  
+2. The system considers all members and all three of their preferences together.  
+3. The preferred allocation is chosen according to the following priorities, in order:  
+   * Maximise the number of members who receive one of their three selected artworks.
+   * Among those possible allocations, maximise the number of single preferences awarded.
+   * Then maximise the number of two preferences awarded.
+   * Then maximise the number of three preferences awarded.
+4. If more than one allocation is equally good under all of these criteria, the published seed is used to resolve the remaining tie.  
+5. Each member can receive at most one artwork.
+6. Once the preferred allocation is complete, members who remain unassigned and opted into receiving a random artwork enter the fallback allocation.
+7. The fallback allocation considers only artworks that:
+   * Are still available
+   * Are not on that member's exclusion list
+   * Match the size categories that member selected
+8. The fallback process aims to allocate suitable remaining artworks to as many eligible members as possible. Where there are multiple equally valid fallback allocations, the published seed is used to resolve the result.
 
-The order of members is **reshuffled at the start of every round**, so no one consistently goes first or last.
+A member may receive no artwork if none of their preferences can be allocated to them and they either declined a random artwork or no suitable fallback artwork remains.
 
 ---
 
 **When Preferences Cannot Be Met**
 
-If none of a member’s listed preferences are available:
+The system looks at the ballot as a whole rather than simply giving an artwork to whoever happens to be considered first.
 
-* If the member has opted in to random assignment, the system may allocate a **random artwork** that matches their size preferences and is not excluded.
+For example, if two members both select the same artwork but one of them can receive another of their selected artworks, the system may allocate the contested artwork to the other member if doing so allows both members to receive something they chose.
 
-* If the member has opted out, the member will simply **not receive an artwork** in that round.
+This means the primary aim is to maximise the number of successful balloters.
 
-Members will never be assigned an artwork they have explicitly excluded.
+   * If a member does not receive any of their selected artworks:
+   * If they opted into random allocation, they may receive a suitable remaining artwork.
+   * If they opted out, they will not receive an artwork.
+
+Members will never be assigned a fallback artwork that they explicitly excluded.
 
 ---
 
 **Fairness and Transparency**
 
-* All members are treated equally; there are **no priority tiers.**
+   * There are no priority tiers between members.
+   * Submission speed does not give a member priority.
+   * The same allocation rules are applied to every ballot.
+   * Randomisation is seeded, meaning that the same seed and the same input data reproduce the same random decisions.
+   * The seed is used only where the allocation rules do not otherwise distinguish between equally good outcomes.
+   * A full audit log is produced showing the allocation results and the seed used.
+   * The audit log and ballot seed will be released alongside the allocations.
 
-* Randomisation is used only to determine order and is **seeded**, meaning the results are reproducible.
-
-* A full **audit log** is kept, showing how each allocation decision was made.
-
-* The audit log and the seed used for the ballot, will be sent out with the allocations.
-
-* To reproduce the allocations result, alter the seed in **seed.txt**, to the one used in the ballot.
-
-* All the code will be available on this Github link.
-
-This ensures the process is fair, consistent and open to review.
+This makes the allocation process reproducible and open to independent review.
 
 ---
 
 **What Balloters Can Expect**
 
-* You may receive your first choice, another listed choice, or (if you opted in) a suitable random artwork.
+   * You may receive either one of your (up to) three preferences.
+   * The system aims first to maximise the number of people who receive one of the artworks they selected.
+   * If you do not receive a selected artwork and opted into fallback allocation, you may receive a suitable random artwork.
+   * Your selected size limits apply to fallback artworks.
+   * You will not receive a fallback artwork that you excluded.
+   * It is possible to receive no artwork if no valid ranked or fallback allocation is available.
 
-* You will not receive an artwork that is too large or small for your space if you specify size limits.
-
-* You will not receive any artwork you excluded.
-
-The ballot system is designed to use preferences rather than speed or status, giving everyone an equal opportunity while aiming to match artworks to members who will most value them.
+The ballot uses members’ stated preferences rather than speed or status, with the aim of giving as many members as possible an artwork they genuinely chose.
 
 ---
 
